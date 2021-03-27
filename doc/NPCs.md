@@ -636,6 +636,7 @@ Condition | Type | Description
 `"u_is_height"`<br/>`"npc_is_height"` | int | `true` if the player character's or NPC's elevation is at least the value of `u_is_height` or `npc_is_height`.
 `"u_has_worn_with_flag"`<br/>`"npc_has_worn_with_flag"` | string | `true` if the player character or NPC is wearing something with the `u_has_worn_with_flag` or `npc_has_worn_with_flag` flag.
 `"u_has_wielded_with_flag"`<br/>`"npc_has_wielded_with_flag"` | string | `true` if the player character or NPC is wielding something with the `u_has_wielded_with_flag` or `npc_has_wielded_with_flag` flag.
+`"u_can_see"`<br/>`"npc_can_see"` | string | `true` if the player character or NPC is not blind and is either not sleeping or has the see_sleep trait.
 
 #### Player Only conditions
 
