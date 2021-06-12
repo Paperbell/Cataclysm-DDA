@@ -1154,6 +1154,7 @@ ifdef OSXCROSS
 	dmg dmg Cataclysm-uncompressed.dmg Cataclysm.dmg
 	rm Cataclysm-uncompressed.dmg
 else
+	plutil -convert binary1 Cataclysm.app/Contents/Info.plist
 	dmgbuild -s build-data/osx/dmgsettings.py "Cataclysm DDA" Cataclysm.dmg
 endif
 
@@ -1196,7 +1197,7 @@ endif
 
 style-json: json_blacklist $(JSON_FORMATTER_BIN)
 ifndef CROSS
-	find data -name "*.json" -print0 | grep -v -z -F -f json_blacklist | \
+	find data gfx -name "*.json" -print0 | grep -v -z -F -f json_blacklist | \
 	  xargs -0 -L 1 $(JSON_FORMATTER_BIN)
 else
 	@echo Cannot run json formatter in cross compiles.
